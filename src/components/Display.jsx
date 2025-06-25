@@ -9,7 +9,7 @@ import { Typewriter } from 'react-simple-typewriter';
 
 
 
-const Diplay = () => {
+const Display = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
@@ -29,7 +29,7 @@ const Diplay = () => {
       }}
     >
       
-      <Stack spacing={4} flex={1}>
+      <Stack spacing={3} flex={1}>
         <Box sx={{ position: 'relative', display: 'inline-block' }}>
           
           <motion.div
@@ -83,7 +83,9 @@ const Diplay = () => {
             fontWeight: 'bold',
             textTransform: 'none',
             '&:hover': {
-            backgroundColor: 'white',
+            backgroundColor: '#f2ac33',
+            color: '#f2ac33',
+            borderColor: '2px solid #f2ac33',
             },
         }}>Search</Button>
         </Box>
@@ -95,7 +97,8 @@ const Diplay = () => {
           <StatItem countEnd={35} label="Awards Winning" />
         </Stack>
       </Stack>
-
+      
+      
       <Box
         component={motion.div}
         initial={{ x: '7rem', opacity: 0 }}
@@ -115,7 +118,8 @@ const Diplay = () => {
           
         }}
       >
-        <img src='/img1.png' alt="img1" style={{ width: '100%', height: '100%' }} />
+        
+        <img src='/img1.jpg' alt="img1" style={{ width: '100%', height: '100%' }} />
       </Box>
     </Box>
   );
@@ -126,10 +130,10 @@ const StatItem = ({ countStart = 0, countEnd, label }) => (
     <Typography variant="h5">
       <CountUp start={countStart} end={countEnd} duration={4} />+
     </Typography>
-    <Typography variant="body2" color="text.secondary">
+    <Typography variant="body2" color="white">
       {label}
     </Typography>
   </Box>
 );
 
-export default Diplay;
+export default Display;

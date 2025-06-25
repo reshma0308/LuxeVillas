@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Greenwood Heights",
+    "price": "75,043",
+    "detail": "21 Lakeview Lane, Ubud, Bali",
+    "image": "./s1.jpg"
+  },
+  {
+    "name": "Azure Haven",
+    "price": "56,443",
+    "detail": "Palm Grove Street, Whitefield, Bangalore",
+    "image": "./s2.jpg"
+  },
+  {
+    "name": "Oakwood Estate",
+    "price": "55,853",
+    "detail": "77 Skyline Tower, Andheri West, Mumbai",
+    "image": "./s3.jpg"
+  },
+  {
+    "name": "Sapphire Villas",
+    "price": "67,043",
+    "detail": "Block B2, Ocean Crest Road, Goa",
+    "image": "./s4.jpg"
+  },
+  {
+    "name": "Asatti Garden City",
+    "price": "66,353",
+    "detail": "Pahlawan Street XVII No.215,  Depok, Jawa Barat",
+    "image": "./s5.jpg"
+  },
+  {
+    "name": "Citralan Puri Serang",
+    "price": "40,853",
+    "detail": "Ruko Puri Indah Residence Block A7, Lingkar Street, Banten",
+    "image": "./s6.jpg"
+  }
+]

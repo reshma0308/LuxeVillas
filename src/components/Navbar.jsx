@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import {
   AppBar,
   Toolbar,
@@ -21,7 +22,7 @@ const Navbar = () => {
   };
 
   const menuItems = [
-    { label: "Homes", link: "#homes" },
+    { label: "Homes", link: "#home" },
     { label: "Why Choose Us", link: "#value" },
     { label: "Reach Us", link: "#contact-us" },
     { label: "Book a Tour", link: "#get-started" },
@@ -44,10 +45,19 @@ const Navbar = () => {
             ))}
             <Button
               variant="outlined"
-              color="secondary"
+              color="#f2ac33"
               href="mailto:resh@gmail.com"
+              sx={{
+              color: '#f2ac33',              
+              borderColor: '#f2ac33',        
+              '&:hover': {
+                backgroundColor: '#f2ac33',
+                color: '#fff',
+                borderColor: '#f2ac33',
+              },
+            }}
             >
-              Enquire Now            </Button>
+              Enquire Now </Button>
           </Box>
 
           
