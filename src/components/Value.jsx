@@ -26,7 +26,9 @@ const Value = () => {
         flexDirection: isMobile ? "column" : "row",
         alignItems: "center",
         gap: 10,
-          bgcolor: "#bfbdb8",
+        background: '#fff',
+        borderRadius: 0,
+        boxShadow: '0 4px 24px rgba(179,114,2,0.06)',
       }}
     >
       
@@ -34,16 +36,17 @@ const Value = () => {
         sx={{
           flex: 1,
           border: "8px solid rgba(232, 232, 232, 0.93)",
-          borderRadius: '15rem 15rem 0 0',
+          borderRadius: 0,
           overflow: "hidden",
           maxWidth: "600px",
           maxHeight: "700px",
+          boxShadow: '0 2px 8px rgba(179,114,2,0.08)',
         }}
       >
         <img
           src="/img2.jpg"
           alt="Our Value"
-          style={{ width: "100%", height: "auto", display: "block" }}
+          style={{ width: "100%", height: "auto", display: "block", borderRadius: 0 }}
         />
       </Box>
 
@@ -58,7 +61,7 @@ const Value = () => {
         </Typography>
 
         <Typography variant="body1" color="text.secondary">
-          We’re always ready to help by providing the best services for you.
+          We're always ready to help by providing the best services for you.
           <br />
           We believe a good place to live can make your life better.
         </Typography>
@@ -66,7 +69,7 @@ const Value = () => {
         
         <Box mt={3}>
           {data.map((item, i) => (
-            <Accordion key={i} sx={{ mb: 2, boxShadow: 2, borderRadius: 5 }}>
+            <Accordion key={i} sx={{ mb: 2, boxShadow: 2, borderRadius: 0, border: '1.5px solid #b37202', background: '#fff' }}>
               <AccordionSummary
                 expandIcon={<ExpandMore />}
                 sx={{

@@ -10,11 +10,12 @@ const Footer = () => {
     <Box
       component="footer"
       sx={{
-        bgcolor: "#f5f5f5",
+        background: 'linear-gradient(120deg, #fffbe6 60%, #f5f5f5 100%)',
         px: isMobile ? 3 : 8,
         py: 6,
         mt: 8,
-        borderTop: "1px solid #ddd",
+        boxShadow: '0 -2px 16px rgba(179,114,2,0.06)',
+        borderRadius: '16px 16px 0 0',
       }}
     >
       <Stack
@@ -47,8 +48,13 @@ const Footer = () => {
                 color="text.primary"
                 sx={{
                   cursor: "pointer",
-                  "&:hover": {
-                    color: "primary.main",
+                  fontWeight: 500,
+                  px: 1,
+                  borderRadius: 2,
+                  transition: 'background 0.2s',
+                  '&:hover': {
+                    color: 'primary.main',
+                    background: '#fffbe6',
                   },
                 }}
               >

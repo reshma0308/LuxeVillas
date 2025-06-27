@@ -11,7 +11,8 @@ const CTASec = () => {
   return (
     <Box
       sx={{
-               bgcolor: "#bfbdb8", 
+        background: '#fff',
+        borderRadius: 0,
         py: 10,
         px: isMobile ? 2 : 6,
         textAlign: "center",
@@ -21,11 +22,13 @@ const CTASec = () => {
         sx={{
           maxWidth: "800px",
           mx: "auto",
-          bgcolor: "black",
-          color: "#fff",
-          borderRadius: 4,
+          background: '#1e1e1e',
+          color: '#fff',
+          borderRadius: 0,
           py: 6,
           px: isMobile ? 3 : 8,
+          border: '2px solid #b37202',
+          boxShadow: '0 4px 24px rgba(179,114,2,0.10)',
         }}
       >
         <Typography variant={isMobile ? "h5" : "h4"} fontWeight={700} gutterBottom>
@@ -50,17 +53,19 @@ const CTASec = () => {
           />
 
           <Button
-            variant="outlined"
+            variant="contained"
             endIcon={<ArrowForwardIcon />}
             sx={{
-              bgcolor: "#fff",
-              color: "#f2ac33",
-              fontWeight: "bold",
+              background: 'linear-gradient(90deg, #b37202 0%, #f2ac33 100%)',
+              color: '#fff',
+              fontWeight: 'bold',
               px: 3,
               py: 1.5,
-              borderRadius: 2,
-              "&:hover": {
-                bgcolor: "#f0f0f0",
+              borderRadius: 0,
+              boxShadow: '0 2px 8px rgba(179,114,2,0.18)',
+              '&:hover': {
+                background: 'linear-gradient(90deg, #f2ac33 0%, #b37202 100%)',
+                color: '#fff',
               },
             }}
           >

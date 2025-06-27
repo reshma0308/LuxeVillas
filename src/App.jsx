@@ -6,6 +6,8 @@ import Value from './components/Value.jsx';
 import Contact from './components/Contact.jsx';
 import Footer from './components/Footer.jsx';
 import CTAsec from './components/CTAsec.jsx';
+import MapSection from './components/MapSection.jsx';
+
 function App() {
   return (
     <div className="App">
@@ -13,12 +15,13 @@ function App() {
         <div className="white-gradient" />
         <Navbar />
         <Display />
+        <MapSection />
       </div>
-      <Homes/>
-      <Value/>
-      <Contact/>
-      <CTAsec/>
-      <Footer/>
+      <Homes />
+      <Value />
+      <Contact />
+      <CTAsec />
+      <Footer />
     </div>
   );
 }

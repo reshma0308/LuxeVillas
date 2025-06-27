@@ -13,10 +13,13 @@ import {
 import { useTheme } from "@mui/material/styles";
 import data from "../utils/slider.json";
 import { sliderSettings } from "../utils/common";
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 
 const Homes = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const swiperRef = React.useRef(null);
 
   return (
     <Box
@@ -44,26 +47,28 @@ const Homes = () => {
       </Stack>
 
       
-      <Swiper {...sliderSettings} modules={[Navigation]} navigation>
-        <SlideNextButton isMobile={isMobile} />
-
+      <Swiper {...sliderSettings} modules={[Navigation]} onSwiper={swiper => (swiperRef.current = swiper)}>
         {data.map((card, i) => (
           <SwiperSlide key={i}>
             <Box
               sx={{
                 p: 2,
-                borderRadius: 2,
-                maxWidth: "max-content",
+                borderRadius: '15rem 15rem 0 0',
+                maxWidth: 500,
+                maxHeight:700,
                 mx: "auto",
                 transition: "0.3s",
                 display: "flex",
                 flexDirection: "column",
                 gap: 1.5,
-                "&:hover": {
+                border: '1.5px solid #f2ac33',
+                background: '#fff',
+                boxShadow: '0 4px 16px 0 rgba(179,114,2,0.10)',
+                '&:hover': {
                   transform: "scale(1.025)",
-                  background:
-                    "linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(136,160,255,0.12) 100%)",
-                  boxShadow: "0px 20px 40px rgba(0,0,0,0.1)",
+                  background: '#f9f9f9',
+                  boxShadow: "0px 20px 40px rgba(179,114,2,0.12)",
+                  borderColor: '#b37202',
                 },
               }}
             >
@@ -72,10 +77,13 @@ const Homes = () => {
                 src={card.image}
                 alt={card.name}
                 sx={{
-                  width: "340px",
-                  height: "200px",
+                  width: "100%",
+                  height: 500,
+                  maxHeight: 700,
                   objectFit: "cover",
-                  borderRadius: 5,
+                  borderRadius: '15rem 15rem 0 0',
+                  mb: 2,
+                  boxShadow: '0 2px 12px rgba(179,114,2,0.08)',
                 }}
               />
 
@@ -90,66 +98,89 @@ const Homes = () => {
                 {card.name}
               </Typography>
 
-              <Typography fontSize="0.8rem" color="text.secondary" sx={{ maxWidth: 240 }}>
+              <Typography fontSize="0.8rem" color="text.secondary" sx={{ maxWidth: 300 }} noWrap>
                 {card.detail}
               </Typography>
             </Box>
           </SwiperSlide>
         ))}
       </Swiper>
+      <SlideNextButton swiper={swiperRef} isMobile={isMobile} />
     </Box>
   );
 };
 
 export default Homes;
 
-const SlideNextButton = ({ isMobile }) => {
-  const swiper = useSwiper();
-
+const SlideNextButton = ({ swiper, isMobile }) => {
   return (
-    <Stack
-      direction="row"
-      spacing={1.5}
+    <Box
       sx={{
-        position: isMobile ? "static" : "absolute",
-        top: isMobile ? "auto" : "-3.5rem",
-        right: isMobile ? "auto" : 0,
-        zIndex: 2,
-        justifyContent: isMobile ? "center" : "flex-end",
-        mb: isMobile ? 2 : 0,
+        position: 'absolute',
+        bottom: { xs: 16, md: 32 },
+        right: { xs: 16, md: 32 },
+        zIndex: 20,
+        display: 'flex',
+        alignItems: 'center',
+        gap: 2,
       }}
     >
       <Button
-        onClick={() => swiper.slidePrev()}
+        onClick={() => swiper.current && swiper.current.slidePrev()}
         sx={{
-          fontSize: "1.2rem",
-          px: 2,
-          py: 0.5,
-          borderRadius: 1,
-          backgroundColor: "#EEE",
-          color: "blue",
-          textTransform: "none",
-          "&:hover": { backgroundColor: "#DDD" },
+          width: 64,
+          height: 64,
+          minWidth: 0,
+          borderRadius: '50%',
+          background: 'rgba(255,255,255,0.35)',
+          color: '#b37202',
+          border: '2.5px solid #f2ac33',
+          boxShadow: '0 8px 32px 0 rgba(179,114,2,0.10)',
+          fontSize: 40,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          backdropFilter: 'blur(8px)',
+          transition: 'all 0.2s',
+          '&:hover': {
+            background: 'rgba(255,255,255,0.7)',
+            color: '#fff',
+            borderColor: '#b37202',
+            boxShadow: '0 12px 32px 0 rgba(179,114,2,0.18)',
+            transform: 'scale(1.10)',
+          },
         }}
       >
-        &lt;
+        <ChevronLeftIcon sx={{ fontSize: 40 }} />
       </Button>
       <Button
-        onClick={() => swiper.slideNext()}
+        onClick={() => swiper.current && swiper.current.slideNext()}
         sx={{
-          fontSize: "1.2rem",
-          px: 1,
-          py: 0.5,
-          borderRadius: 1,
-          backgroundColor: "#FFF",
-          color: "blue",
-          boxShadow: "0px 0px 5px 1px rgba(0, 0, 0, 0.25)",
-          textTransform: "none",
-          "&:hover": { backgroundColor: "#f7f7f7" },
+          width: 64,
+          height: 64,
+          minWidth: 0,
+          borderRadius: '50%',
+          background: 'rgba(255,255,255,0.35)',
+          color: '#b37202',
+          border: '2.5px solid #f2ac33',
+          boxShadow: '0 8px 32px 0 rgba(179,114,2,0.10)',
+          fontSize: 40,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          backdropFilter: 'blur(8px)',
+          transition: 'all 0.2s',
+          '&:hover': {
+            background: 'rgba(255,255,255,0.7)',
+            color: '#fff',
+            borderColor: '#b37202',
+            boxShadow: '0 12px 32px 0 rgba(179,114,2,0.18)',
+            transform: 'scale(1.10)',
+          },
         }}
       >
-        &gt;
+        <ChevronRightIcon sx={{ fontSize: 40 }} />
       </Button>
-    </Stack>
+    </Box>
   );
 };

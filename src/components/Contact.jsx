@@ -21,8 +21,9 @@ const Contact = () => {
         justifyContent: "space-between",
         alignItems: "center",
         gap: 6,
-        bgcolor: "#d9d2c5",
-        
+        background: '#fff',
+        borderRadius: 0,
+        boxShadow: '0 4px 24px rgba(179,114,2,0.06)',
       }}
     >
       
@@ -32,45 +33,89 @@ const Contact = () => {
         </Typography>
 
         <Typography variant={isMobile ? "h4" : "h3"} fontWeight={600}>
-          Let’s Connect With Luxe Villas
+          Let's Connect With Luxe Villas
         </Typography>
 
         <Typography variant="body1" color="text.secondary">
-          We’re here to help you with your property queries. Reach out to our
-          team and we’ll get back to you as soon as possible.
+          We're here to help you with your property queries. Reach out to our
+          team and we'll get back to you as soon as possible.
         </Typography>
 
         <Stack direction={isMobile ? "column" : "row"} spacing={3} mt={5}>
           <Button
             startIcon={<MdCall />}
-            variant="outlined"
-            color="orange"
-            sx={{ borderRadius: "50px", px: 4, py: 1 }}
+            variant="contained"
+            sx={{
+              borderRadius: 0,
+              px: 4,
+              py: 1,
+              background: 'linear-gradient(90deg, #b37202 0%, #f2ac33 100%)',
+              color: '#fff',
+              fontWeight: 600,
+              boxShadow: '0 2px 8px rgba(179,114,2,0.18)',
+              '&:hover': {
+                background: 'linear-gradient(90deg, #f2ac33 0%, #b37202 100%)',
+                color: '#fff',
+              },
+            }}
           >
             Call Now
           </Button>
 
           <Button
             startIcon={<HiChatBubbleBottomCenter />}
-            variant="outlined"
-            color="orange"
-            sx={{ borderRadius: "50px", px: 4, py: 1 }}
+            variant="contained"
+            sx={{
+              borderRadius: 0,
+              px: 4,
+              py: 1,
+              background: 'linear-gradient(90deg, #b37202 0%, #f2ac33 100%)',
+              color: '#fff',
+              fontWeight: 600,
+              boxShadow: '0 2px 8px rgba(179,114,2,0.18)',
+              '&:hover': {
+                background: 'linear-gradient(90deg, #f2ac33 0%, #b37202 100%)',
+                color: '#fff',
+              },
+            }}
           >
             Message Us
           </Button>
           <Button
             startIcon={<BsFillChatDotsFill />}
-            variant="outlined"
-            color="orange"
-            sx={{ borderRadius: "50px", px: 4, py: 1 }}
+            variant="contained"
+            sx={{
+              borderRadius: 0,
+              px: 4,
+              py: 1,
+              background: 'linear-gradient(90deg, #b37202 0%, #f2ac33 100%)',
+              color: '#fff',
+              fontWeight: 600,
+              boxShadow: '0 2px 8px rgba(179,114,2,0.18)',
+              '&:hover': {
+                background: 'linear-gradient(90deg, #f2ac33 0%, #b37202 100%)',
+                color: '#fff',
+              },
+            }}
           >
             Chat 
           </Button>
           <Button
             startIcon={<MdVideoCall />}
-            variant="outlined"
-            color="orange"
-            sx={{ borderRadius: "50px", px: 4, py: 1 }}
+            variant="contained"
+            sx={{
+              borderRadius: 0,
+              px: 4,
+              py: 1,
+              background: 'linear-gradient(90deg, #b37202 0%, #f2ac33 100%)',
+              color: '#fff',
+              fontWeight: 600,
+              boxShadow: '0 2px 8px rgba(179,114,2,0.18)',
+              '&:hover': {
+                background: 'linear-gradient(90deg, #f2ac33 0%, #b37202 100%)',
+                color: '#fff',
+              },
+            }}
           >
             Vedio Call
           </Button>
@@ -84,8 +129,7 @@ const Contact = () => {
         justifyContent="center"
         alignItems="center"
         maxWidth="500px"
-        borderRadius={'15rem 15rem 0 0'}
-        
+        borderRadius={0}
         overflow="hidden"
         sx={{
           boxShadow: 6,
@@ -96,7 +140,7 @@ const Contact = () => {
           component="img"
           src="/img3.jpg"
           alt="Contact"
-          sx={{ width: "100%", height: "auto", objectFit: "cover" }}
+          sx={{ width: "100%", height: "auto", objectFit: "cover", borderRadius: 0 }}
         />
       </Box>
     </Box>

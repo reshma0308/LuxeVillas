@@ -30,34 +30,42 @@ const Navbar = () => {
 
   return (
     <>
-      <AppBar position="static" sx={{ backgroundColor: "#1e1e1e" }}>
-        <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-          <Typography variant="h3" component="h3" fontFamily="'Playfair Display', serif">Luxe Villas</Typography>
+      <AppBar position="static" sx={{ backgroundColor: "#1e1e1e", boxShadow: '0 4px 24px rgba(179,114,2,0.08)', borderRadius: 0 }}>
+        <Toolbar sx={{ display: "flex", justifyContent: "space-between", py: 2, borderRadius: 0 }}>
+          <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+            <Typography variant="h3" component="h3" fontFamily="'Playfair Display', serif" sx={{ color: 'primary.main', fontWeight: 700 }}>
+              Luxe Villas
+            </Typography>
+          </Box>
           <Box sx={{ display: { xs: "none", md: "flex" }, gap: 2 }}>
             {menuItems.map((item) => (
               <Button
                 key={item.label}
                 href={item.link}
                 color="inherit"
+                sx={{ fontWeight: 500, fontSize: '1.1rem', px: 2, '&:hover': { color: 'primary.main' } }}
               >
                 {item.label}
               </Button>
             ))}
             <Button
-              variant="outlined"
-              color="#f2ac33"
+              variant="contained"
               href="mailto:resh@gmail.com"
               sx={{
-              color: '#f2ac33',              
-              borderColor: '#f2ac33',        
-              '&:hover': {
-                backgroundColor: '#f2ac33',
+                background: 'linear-gradient(90deg, #b37202 0%, #f2ac33 100%)',
                 color: '#fff',
-                borderColor: '#f2ac33',
-              },
-            }}
+                fontWeight: 700,
+                px: 3,
+                boxShadow: '0 2px 8px rgba(179,114,2,0.18)',
+                borderRadius: 999,
+                '&:hover': {
+                  background: 'linear-gradient(90deg, #f2ac33 0%, #b37202 100%)',
+                  color: '#fff',
+                },
+              }}
             >
-              Enquire Now </Button>
+              Enquire Now
+            </Button>
           </Box>
 
           

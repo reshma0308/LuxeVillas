@@ -8,7 +8,7 @@
   {
     "name": "Azure Haven",
     "price": "56,443",
-    "detail": "Palm Grove Street, Whitefield, Bangalore",
+    "detail": "Palm Grove, Whitefield, Bangalore",
     "image": "./s2.jpg"
   },
   {
@@ -26,13 +26,13 @@
   {
     "name": "Asatti Garden City",
     "price": "66,353",
-    "detail": "Pahlawan Street XVII No.215,  Depok, Jawa Barat",
+    "detail": "Pahlawan Street XVII No.215,Depok,Jawa Barat",
     "image": "./s5.jpg"
   },
   {
     "name": "Citralan Puri Serang",
     "price": "40,853",
-    "detail": "Ruko Puri Indah Residence Block A7, Lingkar Street, Banten",
+    "detail": "RukIndah Residence Block A7,LingkarStreet, Banten",
     "image": "./s6.jpg"
   }
 ]
