@@ -55,7 +55,7 @@ const Homes = () => {
                 p: 2,
                 borderRadius: '15rem 15rem 0 0',
                 maxWidth: 500,
-                maxHeight:700,
+                maxHeight:600,
                 mx: "auto",
                 transition: "0.3s",
                 display: "flex",
@@ -79,7 +79,7 @@ const Homes = () => {
                 sx={{
                   width: "100%",
                   height: 500,
-                  maxHeight: 700,
+                  maxHeight: 600,
                   objectFit: "cover",
                   borderRadius: '15rem 15rem 0 0',
                   mb: 2,

@@ -2,13 +2,13 @@
   {
     "name": "Greenwood Heights",
     "price": "75,043",
-    "detail": "21 Lakeview Lane, Ubud, Bali",
+    "detail": "21 Lakeview Lane, Unicorn Avenue,Ubud, Bali",
     "image": "./s1.jpg"
   },
   {
     "name": "Azure Haven",
     "price": "56,443",
-    "detail": "Palm Grove, Whitefield, Bangalore",
+    "detail": "Palm Grove Street ,89, Whitefield, Bangalore",
     "image": "./s2.jpg"
   },
   {
@@ -20,7 +20,7 @@
   {
     "name": "Sapphire Villas",
     "price": "67,043",
-    "detail": "Block B2, Ocean Crest Road, Goa",
+    "detail": "Block B2, Ocean Crest Road,INFG453, Goa",
     "image": "./s4.jpg"
   },
   {
@@ -32,7 +32,7 @@
   {
     "name": "Citralan Puri Serang",
     "price": "40,853",
-    "detail": "RukIndah Residence Block A7,LingkarStreet, Banten",
+    "detail": "Indah Residence Block A7,LinkarStreet,Banten",
     "image": "./s6.jpg"
   }
 ]

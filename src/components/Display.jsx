@@ -128,7 +128,7 @@ const Display = () => {
           maxHeight: 700,
         }}
       >
-        <img src='/disp.jpg' alt="img1" style={{ width: '100%', height: '300%', maxHeight: '500px', objectFit: 'cover', zIndex: 1, borderRadius: '15rem 15rem 0 0', boxShadow: '0 4px 24px rgba(30,30,30,0.10)' }} />
+        <img src='/disp.jpg' alt="img1" style={{ width: '100%', height: '100%', objectFit: 'cover', zIndex: 1, borderRadius: '15rem 15rem 0 0', boxShadow: '0 4px 24px rgba(30,30,30,0.10)' }} />
         {/* Dramatic gold animated overlay */}
         <motion.div
           initial={{ opacity: 0 }}

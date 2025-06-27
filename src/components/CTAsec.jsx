@@ -61,7 +61,7 @@ const CTASec = () => {
               fontWeight: 'bold',
               px: 3,
               py: 1.5,
-              borderRadius: 0,
+              borderRadius: 2,
               boxShadow: '0 2px 8px rgba(179,114,2,0.18)',
               '&:hover': {
                 background: 'linear-gradient(90deg, #f2ac33 0%, #b37202 100%)',
